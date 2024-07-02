@@ -46,6 +46,7 @@ class Pizza(db.Model, SerializerMixin):
     name = db.Column(db.String)
     ingredients = db.Column(db.String)
 
+
     # Add relationship
     restaurant_pizzas = relationship('RestaurantPizza', back_populates='pizza', cascade='all, delete-orphan')
     restaurants = association_proxy('restaurant_pizzas', 'restaurant')
