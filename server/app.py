@@ -80,7 +80,7 @@ def create_restaurant_pizza():
     db.session.add(restaurant_pizza)
     db.session.commit()
 
-    # return make_response(jsonify({"message": "Added successfully"}),404)
+
 
     return jsonify(restaurant_pizza.to_dict()), 201
 
